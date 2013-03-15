@@ -542,7 +542,7 @@ namespace PerformanceLab.Utils.ReportMaker
                 if (indexCPUA == 0) //отрезок кода рисующий график
                 {
                     var loadChart = newSheet.Drawings.AddChart("CPU-Load", eChartType.Line);
-                    loadChart.Title.Text = serv + " CPU Load, %";
+                    loadChart.Title.Text = serv + " CPU Load";
                     loadChart.Title.Font.Size = 12;
                     loadChart.SetPosition(200, 300);
                     loadChart.Legend.Position = eLegendPosition.Bottom;                  
@@ -551,6 +551,12 @@ namespace PerformanceLab.Utils.ReportMaker
                     loadChart.YAxis.Format = "#,##0";
                     loadChart.YAxis.MaxValue = 100;
                     loadChart.YAxis.MinValue = 0;
+                    loadChart.YAxis.Title.Text = "Средняя нагрузка на CPU, %";                    
+                    loadChart.XAxis.Title.Text = "Время теста, мин";
+                    loadChart.YAxis.Title.Font.Bold = true;
+                    loadChart.YAxis.Title.Font.Size = 10;
+                    loadChart.XAxis.Title.Font.Bold = true;
+                    loadChart.XAxis.Title.Font.Size = 10;
 
                     for (int i = 3; i < 4; i++)
                     {
@@ -559,15 +565,20 @@ namespace PerformanceLab.Utils.ReportMaker
                     }
 
                     var OstChart = newSheet.Drawings.AddChart("CPU-use", eChartType.AreaStacked);
-                    OstChart.Title.Text = serv + " CPU usage, %";
+                    OstChart.Title.Text = serv + " CPU usage";
                     OstChart.Title.Font.Size = 12;
                     OstChart.SetPosition(1000, 300);
                     OstChart.Legend.Position = eLegendPosition.Bottom;
                     OstChart.Legend.Add();
                     OstChart.SetSize(1000, 600);
                     OstChart.YAxis.Format = "#,##0";
-                    loadChart.YAxis.MaxValue = 100;
-                    loadChart.YAxis.MinValue = 0;
+                    OstChart.YAxis.MinValue = 0;
+                    OstChart.YAxis.Title.Text = "Средняя нагрузка на CPU, %";
+                    OstChart.XAxis.Title.Text = "Время теста, мин";
+                    OstChart.YAxis.Title.Font.Bold = true;
+                    OstChart.YAxis.Title.Font.Size = 10;
+                    OstChart.XAxis.Title.Font.Bold = true;
+                    OstChart.XAxis.Title.Font.Size = 10;
 
                     for (int i = 0; i < 3; i++)
                     {
@@ -578,15 +589,21 @@ namespace PerformanceLab.Utils.ReportMaker
                 }
                 else
                 {
-                    var chart = newSheet.Drawings.AddChart("CPU_ALL", eChartType.AreaStacked);
-                    chart.Title.Text = serv + " CPU usage cores, %";
+                    var chart = newSheet.Drawings.AddChart("CPU_ALL", eChartType.AreaStacked);                    
+                    chart.Title.Text = serv + " CPU usage cores";
                     chart.Title.Font.Size = 12;
                     chart.SetPosition(200, 300);
                     chart.Legend.Position = eLegendPosition.Bottom;
                     chart.Legend.Add();
                     chart.SetSize(1000, 600);
                     chart.YAxis.Format = "#,##0";
-                    chart.YAxis.MaxValue = 100 * Cores.Count;                    
+                    chart.YAxis.MaxValue = 100 * Cores.Count;
+                    chart.YAxis.Title.Text = "Средняя нагрузка на CPU, %";
+                    chart.XAxis.Title.Text = "Время теста, мин";
+                    chart.YAxis.Title.Font.Bold = true;
+                    chart.YAxis.Title.Font.Size = 10;
+                    chart.XAxis.Title.Font.Bold = true;
+                    chart.XAxis.Title.Font.Size = 10;
                     for (int i = 0; i < Cores.Count; i++)
                     {
                         var serie = chart.Series.Add(ExcelRange.GetAddress(3, i + 3, newSheet.Dimension.End.Row - 1, i + 3), ExcelRange.GetAddress(3, 2, newSheet.Dimension.End.Row - 1, 2));
@@ -664,15 +681,21 @@ namespace PerformanceLab.Utils.ReportMaker
                 }
 
                 var chart = newSheet.Drawings.AddChart("Memory", eChartType.Line);
-                chart.Title.Text = serv + " Memory usage, %";
+                chart.Title.Text = serv + " Memory usage";
                 chart.Title.Font.Size = 12;
                 chart.SetPosition(200, 300);
                 chart.Legend.Position = eLegendPosition.Bottom;
                 chart.Legend.Add();
                 chart.SetSize(1000, 600);
                 chart.YAxis.MaxValue = 100;
-                chart.YAxis.Format = "#0";
+                chart.YAxis.Format = "000";
                 chart.YAxis.MinValue = 0;
+                chart.YAxis.Title.Text = "Средняя загрузка по памяти, %";
+                chart.XAxis.Title.Text = "Время теста, мин";
+                chart.YAxis.Title.Font.Bold = true;
+                chart.YAxis.Title.Font.Size = 10;
+                chart.XAxis.Title.Font.Bold = true;
+                chart.XAxis.Title.Font.Size = 10;
                 for (int i = 0; i < 1; i++)
                 {
                     var serie = chart.Series.Add(ExcelRange.GetAddress(3, i + 3, newSheet.Dimension.End.Row - 1, i + 3), ExcelRange.GetAddress(3, 2, newSheet.Dimension.End.Row - 1, 2));
@@ -787,13 +810,19 @@ namespace PerformanceLab.Utils.ReportMaker
                 if (indexA == 0) //отрезок кода рисующий график
                 {
                     var chart = newSheet.Drawings.AddChart("Disk_io", eChartType.Line);
-                    chart.Title.Text = serv + " Disk iotime, ms";
+                    chart.Title.Text = serv + " Disk iotime";
                     chart.Title.Font.Size = 12;
                     chart.SetPosition(200, 300);
                     chart.Legend.Position = eLegendPosition.Bottom;
                     chart.Legend.Add();
                     chart.SetSize(1000, 600);
-                    chart.YAxis.Format = "#0";
+                    chart.YAxis.Format = "000";
+                    chart.YAxis.Title.Text = "Время отклика дисков, мс";
+                    chart.XAxis.Title.Text = "Время теста, мин";
+                    chart.YAxis.Title.Font.Bold = true;
+                    chart.YAxis.Title.Font.Size = 10;
+                    chart.XAxis.Title.Font.Bold = true;
+                    chart.XAxis.Title.Font.Size = 10;
                     int n = DiskList.Count;
                     using (ExcelRange col = newSheet.Cells[1, 1, newSheet.Dimension.End.Row, n + 3])
                     {
@@ -810,7 +839,7 @@ namespace PerformanceLab.Utils.ReportMaker
                 else
                 {
                     var chart = newSheet.Drawings.AddChart("Disk_use", eChartType.Line);
-                    chart.Title.Text = serv + " Disk usage, %";
+                    chart.Title.Text = serv + " Disk usage";
                     chart.Title.Font.Size = 12;
                     chart.SetPosition(200, 300);
                     chart.Legend.Position = eLegendPosition.Bottom;
@@ -819,6 +848,12 @@ namespace PerformanceLab.Utils.ReportMaker
                     chart.YAxis.Format = "#0";
                     chart.YAxis.MaxValue = 100;
                     chart.YAxis.MinValue = 0;
+                    chart.YAxis.Title.Text = "Средняя нагрузка на диски, %";
+                    chart.XAxis.Title.Text = "Время теста, мин";
+                    chart.YAxis.Title.Font.Bold = true;
+                    chart.YAxis.Title.Font.Size = 10;
+                    chart.XAxis.Title.Font.Bold = true;
+                    chart.XAxis.Title.Font.Size = 10;
                     int n = DiskList.Count;
                     using (ExcelRange col = newSheet.Cells[1, 1, newSheet.Dimension.End.Row, n + 2])
                     {
