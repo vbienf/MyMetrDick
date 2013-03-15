@@ -1,0 +1,21 @@
+POS;Get client info&1050
+RD;CC_Send client data&106
+SC;MS_Send client data&300
+AUTO;AUTO_Send_client_data&46
+ByNum;Search_SearchCreditsOut&176
+ByPass;SBP_Do_client_Identification&100
+BySRoom;>>>> Поиск по магазу /ru21r2/paru/SearchCreditsOut.do&90
+ByDates;>>>> Поиск по дате /ru21r2/paru/SearchCreditsOut.do&90
+HSISS;HSIS_SSP_Search.sellerplace&10
+DTS;SIDTS_FindDocumentC&10
+Collect;VB6_WU_Select_hro.id&300
+MV;SOAP/XML-RPC Request&0
+SearchinCC;33 ClientWS.getEventList&138
+bd1;БД, узел1_dbperf1
+bd2;БД, узел2_dbperf2
+apserv1;Сервер приложений, узел1_ra-bx07
+apserv2;Сервер приложений, узел2_ra-bx08
+bus1;Шина, узел1_ra-vx42
+bus2;Шина, узел2_ra-vx43
+apserv_balancer;Балансировшик шины_ra-vx44
+osb_balancer;Балансировщик сервера приложений_ra-vx71

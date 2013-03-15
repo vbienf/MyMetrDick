@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="15" lt="11" ts="1346217921082" s="true" lb="Homer_Start_Page" rc="200" rm="OK" tn="STG_MS 2-1" dt="text" by="14110">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Duration Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="5" lt="5" ts="1346217921098" s="true" lb="Homer_Start_Page_Get_text-login.css" rc="200" rm="OK" tn="STG_MS 2-1" dt="text" by="1747">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="8" lt="2" ts="1346217921103" s="true" lb="Homer_Start_Page_Get_commonscripts.js" rc="200" rm="OK" tn="STG_MS 2-1" dt="text" by="61169">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="3" lt="3" ts="1346217921111" s="true" lb="Homer_Start_Page_Get_logo_left1_ru.gif" rc="200" rm="OK" tn="STG_MS 2-1" dt="bin" by="4282">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>

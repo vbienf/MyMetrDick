@@ -1,0 +1,1113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1F925C5-C0D9-4906-A1C0-29FB6C7E194E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PfLb.ReportMaker</RootNamespace>
+    <AssemblyName>MetrReport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PerformanceLab.Utils.ReportMaker.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PerformanceLab.Utils.ReportMaker.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\PerformanceLab.Utils.ReportMaker.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=3.0.0.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigMaster.cs" />
+    <Compile Include="CustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl1.Designer.cs">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerlMaster.cs" />
+    <Compile Include="ExcelMaster.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControl1.resx">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.txt" />
+    <Content Include="dictionary.txt" />
+    <Content Include="lib\EPPlus.dll" />
+    <Content Include="parser\libgcc_s_sjlj-1.dll" />
+    <Content Include="parser\libstdc++-6.dll" />
+    <Content Include="parser\lib\auto\File\Glob\Glob.dll" />
+    <Content Include="parser\lib\auto\List\Util\Util.dll" />
+    <Content Include="parser\lib\auto\mro\mro.dll" />
+    <Content Include="parser\lib\auto\threads\threads.dll" />
+    <Content Include="parser\lib\unicore\Blocks.txt" />
+    <Content Include="parser\lib\unicore\CaseFolding.txt" />
+    <Content Include="parser\lib\unicore\NamedSequences.txt" />
+    <Content Include="parser\lib\unicore\SpecialCasing.txt" />
+    <Content Include="parser\perl.exe" />
+    <Content Include="parser\perl516.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="parser\jmeter_log_parser.pl" />
+    <None Include="parser\lib\auto\File\Glob\Glob.bs" />
+    <None Include="parser\lib\auto\List\Util\Util.bs" />
+    <None Include="parser\lib\auto\mro\mro.bs" />
+    <None Include="parser\lib\auto\threads\threads.bs" />
+    <None Include="parser\lib\Carp.pm" />
+    <None Include="parser\lib\Config.pm" />
+    <None Include="parser\lib\Config_git.pl" />
+    <None Include="parser\lib\Config_heavy.pl" />
+    <None Include="parser\lib\constant.pm" />
+    <None Include="parser\lib\DynaLoader.pm" />
+    <None Include="parser\lib\Exporter.pm" />
+    <None Include="parser\lib\Exporter\Heavy.pm" />
+    <None Include="parser\lib\feature.pm" />
+    <None Include="parser\lib\File\Glob.pm" />
+    <None Include="parser\lib\integer.pm" />
+    <None Include="parser\lib\List\Util.pm" />
+    <None Include="parser\lib\mro.pm" />
+    <None Include="parser\lib\overload.pm" />
+    <None Include="parser\lib\overloading.pm" />
+    <None Include="parser\lib\overload\numbers.pm" />
+    <None Include="parser\lib\PAR.pm" />
+    <None Include="parser\lib\Scalar\Util.pm" />
+    <None Include="parser\lib\strict.pm" />
+    <None Include="parser\lib\threads.pm" />
+    <None Include="parser\lib\Time\Local.pm" />
+    <None Include="parser\lib\unicore\CombiningClass.pl" />
+    <None Include="parser\lib\unicore\Decomposition.pl" />
+    <None Include="parser\lib\unicore\Heavy.pl" />
+    <None Include="parser\lib\unicore\lib\Age\NA.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V11.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V20.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V21.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V30.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V31.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V32.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V40.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V41.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V50.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V51.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V52.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V60.pl" />
+    <None Include="parser\lib\unicore\lib\Age\V61.pl" />
+    <None Include="parser\lib\unicore\lib\AHex\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Alpha\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\AL.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\AN.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\B.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\BN.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\CS.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\EN.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\ES.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\ET.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\L.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\LRE.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\LRO.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\NSM.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\ON.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\PDF.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\R.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\RLE.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\RLO.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\S.pl" />
+    <None Include="parser\lib\unicore\lib\Bc\WS.pl" />
+    <None Include="parser\lib\unicore\lib\BidiC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\BidiM\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\AegeanNu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Alchemic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Alphabet.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ancient2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\AncientG.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\AncientS.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Arabic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ArabicEx.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ArabicMa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ArabicP2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ArabicPF.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ArabicSu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Armenian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Arrows.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ASCII.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Avestan.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Balinese.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Bamum.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\BamumSup.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Batak.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Bengali.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\BlockEle.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Bopomof2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Bopomofo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\BoxDrawi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Brahmi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Buginese.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Buhid.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Byzantin.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Carian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Chakma.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cham.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cherokee.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJK.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKComp2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKComp3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKComp4.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKCompa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKExtA.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKExtB.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKExtC.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKExtD.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKRadic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKStrok.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CJKSymbo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CompatJa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\ControlP.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Coptic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Counting.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cuneifo2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cuneifor.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Currency.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\CypriotS.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cyrilli2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cyrilli3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cyrilli4.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Cyrillic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Devanag2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Devanaga.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Diacrit2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Diacrit3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Diacriti.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Dingbats.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Domino.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Egyptian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Emoticon.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Enclose2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Enclose3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Enclose4.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Enclosed.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ethiopi2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ethiopi3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ethiopi4.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ethiopic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Geometri.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Georgia2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Georgian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Glagolit.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Gothic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Greek.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\GreekExt.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Gujarati.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Gurmukhi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\HalfAndF.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\HalfMark.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Hangul.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Hanunoo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Hebrew.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\HighPUSu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\HighSurr.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Hiragana.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\IDC.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Imperial.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\IndicNum.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Inscrip2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Inscript.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\IPAExt.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Jamo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\JamoExtA.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\JamoExtB.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Javanese.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Kaithi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\KanaSup.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Kanbun.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Kangxi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Kannada.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Katakan2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Katakana.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Kharosht.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Khmer.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\KhmerSym.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Lao.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Latin1.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LatinEx2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LatinEx3.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LatinEx4.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LatinEx5.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LatinExt.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Lepcha.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Letterli.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Limbu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LinearBI.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LinearBS.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\LowSurro.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Lycian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Lydian.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Mahjong.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Malayala.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Mandaic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MathAlph.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MathOper.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MeeteiM2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MeeteiMa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Meroitic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Miao.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscArro.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscMat2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscMath.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscPict.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscSymb.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MiscTech.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Modifie2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Modifier.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Mongolia.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Music.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Myanmar.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\MyanmarE.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\NB.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\NewTaiLu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\NKo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\NumberFo.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\OCR.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ogham.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\OldItali.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\OldPersi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\OldTurki.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Oriya.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Osmanya.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\PhagsPa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Phaistos.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Phoenici.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Phoneti2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Phonetic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\PlayingC.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\PUA.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Punctuat.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Rejang.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Rumi.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Runic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Samarita.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Saurasht.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Sharada.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Sinhala.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SmallFor.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SoraSomp.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Specials.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Sundane2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Sundanes.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupArro2.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupArrow.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SuperAnd.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupMathO.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupPUAA.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupPUAB.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SupPunct.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\SylotiNa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Syriac.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tagalog.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tagbanwa.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tags.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\TaiLe.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\TaiTham.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\TaiViet.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\TaiXuanJ.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Takri.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tamil.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Telugu.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Thaana.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Thai.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tibetan.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Tifinagh.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Transpor.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\UCAS.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\UCASExt.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Ugaritic.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Vai.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\VedicExt.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Vertical.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\VS.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\VSSup.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\Yijing.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\YiRadica.pl" />
+    <None Include="parser\lib\unicore\lib\Blk\YiSyllab.pl" />
+    <None Include="parser\lib\unicore\lib\Cased\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\A.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\AL.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\AR.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\ATA.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\ATAR.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\ATB.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\B.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\BL.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\BR.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC10.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC103.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC107.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC11.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC118.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC12.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC122.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC129.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC13.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC130.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC132.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC14.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC15.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC16.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC17.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC18.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC19.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC20.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC21.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC22.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC23.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC24.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC25.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC26.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC27.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC28.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC29.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC30.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC31.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC32.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC33.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC34.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC35.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC36.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC84.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\CCC91.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\DA.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\DB.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\IS.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\KV.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\L.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\NK.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\NR.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\OV.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\R.pl" />
+    <None Include="parser\lib\unicore\lib\Ccc\VR.pl" />
+    <None Include="parser\lib\unicore\lib\CE\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CI\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CompEx\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWCF\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWCM\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWKCF\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWL\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWT\Y.pl" />
+    <None Include="parser\lib\unicore\lib\CWU\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Dash\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Dep\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Dia\Y.pl" />
+    <None Include="parser\lib\unicore\lib\DI\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Com.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Enc.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Fin.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Font.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Fra.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Init.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Iso.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Med.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Nar.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Nb.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\NonCanon.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\None.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Sml.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Sqr.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Sub.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Sup.pl" />
+    <None Include="parser\lib\unicore\lib\Dt\Vert.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\A.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\F.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\H.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\N.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\Na.pl" />
+    <None Include="parser\lib\unicore\lib\Ea\W.pl" />
+    <None Include="parser\lib\unicore\lib\Ext\Y.pl" />
+    <None Include="parser\lib\unicore\lib\GCB\CN.pl" />
+    <None Include="parser\lib\unicore\lib\GCB\EX.pl" />
+    <None Include="parser\lib\unicore\lib\GCB\SM.pl" />
+    <None Include="parser\lib\unicore\lib\GCB\XX.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\C.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Cc.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Cf.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Cn.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Co.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Cs.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\L.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\LC.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Ll.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Lm.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Lo.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Lu.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\M.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Mc.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Me.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Mn.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\N.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Nd.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Nl.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\No.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\P.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Pc.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Pd.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Pe.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Pf.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Pi.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Po.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Ps.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\S.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Sc.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Sk.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Sm.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\So.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Z.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Zl.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Zp.pl" />
+    <None Include="parser\lib\unicore\lib\Gc\Zs.pl" />
+    <None Include="parser\lib\unicore\lib\GrBase\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Hex\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Hst\NA.pl" />
+    <None Include="parser\lib\unicore\lib\Hyphen\Y.pl" />
+    <None Include="parser\lib\unicore\lib\IDC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Ideo\Y.pl" />
+    <None Include="parser\lib\unicore\lib\IDSB\Y.pl" />
+    <None Include="parser\lib\unicore\lib\IDST\Y.pl" />
+    <None Include="parser\lib\unicore\lib\IDS\Y.pl" />
+    <None Include="parser\lib\unicore\lib\In\2_0.pl" />
+    <None Include="parser\lib\unicore\lib\In\2_1.pl" />
+    <None Include="parser\lib\unicore\lib\In\3_0.pl" />
+    <None Include="parser\lib\unicore\lib\In\3_1.pl" />
+    <None Include="parser\lib\unicore\lib\In\3_2.pl" />
+    <None Include="parser\lib\unicore\lib\In\4_0.pl" />
+    <None Include="parser\lib\unicore\lib\In\4_1.pl" />
+    <None Include="parser\lib\unicore\lib\In\5_0.pl" />
+    <None Include="parser\lib\unicore\lib\In\5_1.pl" />
+    <None Include="parser\lib\unicore\lib\In\5_2.pl" />
+    <None Include="parser\lib\unicore\lib\In\6_0.pl" />
+    <None Include="parser\lib\unicore\lib\In\6_1.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Ain.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Alaph.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Alef.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Beh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Beth.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Burushas.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Dal.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\DalathRi.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\E.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\FarsiYeh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Fe.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Feh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\FinalSem.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Gaf.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Gamal.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Hah.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\HamzaOnH.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\He.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Heh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\HehGoal.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Heth.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Kaf.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Kaph.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Khaph.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\KnottedH.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Lam.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Lamadh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Meem.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Mim.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\NoJoinin.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Noon.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Nun.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Nya.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Pe.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Qaf.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Qaph.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Reh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Reversed.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Rohingya.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Sad.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Sadhe.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Seen.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Semkath.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Shin.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\SwashKaf.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\SyriacWa.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Tah.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Taw.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\TehMarbu.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Teth.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Waw.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Yeh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\YehBarre.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\YehWithT.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Yudh.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\YudhHe.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Zain.pl" />
+    <None Include="parser\lib\unicore\lib\Jg\Zhain.pl" />
+    <None Include="parser\lib\unicore\lib\JoinC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Jt\C.pl" />
+    <None Include="parser\lib\unicore\lib\Jt\D.pl" />
+    <None Include="parser\lib\unicore\lib\Jt\R.pl" />
+    <None Include="parser\lib\unicore\lib\Jt\T.pl" />
+    <None Include="parser\lib\unicore\lib\Jt\U.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\AI.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\AL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\B2.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\BA.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\BB.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\BK.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CB.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CJ.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CM.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CP.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\CR.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\EX.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\GL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\H2.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\H3.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\HL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\HY.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\ID.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\IN.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\IS.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\JL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\JT.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\JV.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\LF.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\NL.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\NS.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\NU.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\OP.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\PO.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\PR.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\QU.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\SA.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\SG.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\SP.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\SY.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\WJ.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\XX.pl" />
+    <None Include="parser\lib\unicore\lib\Lb\ZW.pl" />
+    <None Include="parser\lib\unicore\lib\LOE\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Lower\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Math\Y.pl" />
+    <None Include="parser\lib\unicore\lib\NChar\Y.pl" />
+    <None Include="parser\lib\unicore\lib\NFCQC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\NFDQC\N.pl" />
+    <None Include="parser\lib\unicore\lib\NFDQC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\NFKCQC\M.pl" />
+    <None Include="parser\lib\unicore\lib\NFKCQC\N.pl" />
+    <None Include="parser\lib\unicore\lib\NFKCQC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\NFKDQC\N.pl" />
+    <None Include="parser\lib\unicore\lib\Nt\Di.pl" />
+    <None Include="parser\lib\unicore\lib\Nt\Nu.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\0.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\10.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\100.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\10000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\100000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\10000000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\10000002.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\11.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\11_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\12.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\13.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\13_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\14.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\15.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\15_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\16.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\17.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\17_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\18.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\19.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_10.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_16.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_3.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_4.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_5.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_6.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_7.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_8.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\1_9.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\20.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\200.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\2000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\20000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\21.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\22.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\23.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\24.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\25.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\26.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\27.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\28.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\29.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\2_3.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\2_5.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\30.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\300.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\30000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\31.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\32.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\33.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\34.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\35.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\36.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\37.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\38.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\39.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3_16.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3_4.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3_5.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\3_8.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\4.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\40.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\400.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\4000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\40000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\41.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\42.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\43.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\44.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\45.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\46.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\47.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\48.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\49.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\4_5.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\5.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\50.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\500.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\5000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\50000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\5_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\5_6.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\5_8.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\6.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\60.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\600.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\6000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\60000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\7.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\70.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\700.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\7000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\70000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\7_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\7_8.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\8.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\80.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\800.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\8000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\80000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\9.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\90.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\900.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\9000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\90000.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\9_2.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\NaN.pl" />
+    <None Include="parser\lib\unicore\lib\Nv\_1_2.pl" />
+    <None Include="parser\lib\unicore\lib\PatSyn\Y.pl" />
+    <None Include="parser\lib\unicore\lib\PatWS\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Alnum.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Any.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Assigned.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Blank.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Graph.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PerlSpac.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PerlWord.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixAln.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixAlp.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixBla.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixCnt.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixDig.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixGra.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixLow.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixPri.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixPun.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixSpa.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\PosixUpp.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Print.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\SpacePer.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Title.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\VertSpac.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\Word.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\XPosixPu.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_PerlIDS.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_PerlNon.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_PerlQuo.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_XBegin.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_XExtend.pl" />
+    <None Include="parser\lib\unicore\lib\Perl\_XLVLVTV.pl" />
+    <None Include="parser\lib\unicore\lib\QMark\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Radical\Y.pl" />
+    <None Include="parser\lib\unicore\lib\SB\AT.pl" />
+    <None Include="parser\lib\unicore\lib\SB\CL.pl" />
+    <None Include="parser\lib\unicore\lib\SB\EX.pl" />
+    <None Include="parser\lib\unicore\lib\SB\FO.pl" />
+    <None Include="parser\lib\unicore\lib\SB\LE.pl" />
+    <None Include="parser\lib\unicore\lib\SB\LO.pl" />
+    <None Include="parser\lib\unicore\lib\SB\SC.pl" />
+    <None Include="parser\lib\unicore\lib\SB\SE.pl" />
+    <None Include="parser\lib\unicore\lib\SB\Sp.pl" />
+    <None Include="parser\lib\unicore\lib\SB\ST.pl" />
+    <None Include="parser\lib\unicore\lib\SB\UP.pl" />
+    <None Include="parser\lib\unicore\lib\SB\XX.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Arab.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Armi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Armn.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Avst.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Bali.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Bamu.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Batk.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Beng.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Bopo.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Brah.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Brai.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Bugi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Buhd.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cakm.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cans.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cari.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cham.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cher.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Copt.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cprt.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Cyrl.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Deva.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Dsrt.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Egyp.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Ethi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Geor.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Glag.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Goth.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Grek.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Gujr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Guru.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Han.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Hang.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Hano.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Hebr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Hira.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Ital.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Java.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Kali.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Kana.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Khar.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Khmr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Knda.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Kthi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lana.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lao.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Latn.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lepc.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Limb.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Linb.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lisu.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lyci.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Lydi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mand.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Merc.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mero.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Miao.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mlym.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mong.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mtei.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Mymr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Nko.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Ogam.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Olck.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Orkh.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Orya.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Osma.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Phag.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Phli.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Phnx.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Prti.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Rjng.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Runr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Samr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Sarb.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Saur.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Shaw.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Shrd.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Sinh.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Sora.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Sund.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Sylo.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Syrc.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tagb.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Takr.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tale.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Talu.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Taml.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tavt.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Telu.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tfng.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tglg.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Thaa.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Thai.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Tibt.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Ugar.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Vai.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Xpeo.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Xsux.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Yi.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Zinh.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Zyyy.pl" />
+    <None Include="parser\lib\unicore\lib\Scx\Zzzz.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Arab.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Armn.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Beng.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Bopo.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Buhd.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Cprt.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Deva.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Geor.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Gujr.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Guru.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Han.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Hang.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Hano.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Hira.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Kana.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Kthi.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Linb.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Mand.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Mong.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Orya.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Phag.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Syrc.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Tagb.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Takr.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Tglg.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Thaa.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Yi.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Zinh.pl" />
+    <None Include="parser\lib\unicore\lib\Sc\Zyyy.pl" />
+    <None Include="parser\lib\unicore\lib\SD\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Space\Y.pl" />
+    <None Include="parser\lib\unicore\lib\STerm\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Term\Y.pl" />
+    <None Include="parser\lib\unicore\lib\UIdeo\Y.pl" />
+    <None Include="parser\lib\unicore\lib\Upper\Y.pl" />
+    <None Include="parser\lib\unicore\lib\VS\Y.pl" />
+    <None Include="parser\lib\unicore\lib\WB\FO.pl" />
+    <None Include="parser\lib\unicore\lib\WB\KA.pl" />
+    <None Include="parser\lib\unicore\lib\WB\LE.pl" />
+    <None Include="parser\lib\unicore\lib\WB\MB.pl" />
+    <None Include="parser\lib\unicore\lib\WB\ML.pl" />
+    <None Include="parser\lib\unicore\lib\WB\MN.pl" />
+    <None Include="parser\lib\unicore\lib\WB\NL.pl" />
+    <None Include="parser\lib\unicore\lib\WB\NU.pl" />
+    <None Include="parser\lib\unicore\lib\WB\XX.pl" />
+    <None Include="parser\lib\unicore\lib\XIDC\Y.pl" />
+    <None Include="parser\lib\unicore\lib\XIDS\Y.pl" />
+    <None Include="parser\lib\unicore\Name.pl" />
+    <None Include="parser\lib\unicore\Name.pm" />
+    <None Include="parser\lib\unicore\To\Age.pl" />
+    <None Include="parser\lib\unicore\To\Bc.pl" />
+    <None Include="parser\lib\unicore\To\Bmg.pl" />
+    <None Include="parser\lib\unicore\To\Cf.pl" />
+    <None Include="parser\lib\unicore\To\Digit.pl" />
+    <None Include="parser\lib\unicore\To\Ea.pl" />
+    <None Include="parser\lib\unicore\To\Fold.pl" />
+    <None Include="parser\lib\unicore\To\Gc.pl" />
+    <None Include="parser\lib\unicore\To\GCB.pl" />
+    <None Include="parser\lib\unicore\To\Hst.pl" />
+    <None Include="parser\lib\unicore\To\Isc.pl" />
+    <None Include="parser\lib\unicore\To\Jg.pl" />
+    <None Include="parser\lib\unicore\To\Jt.pl" />
+    <None Include="parser\lib\unicore\To\Lb.pl" />
+    <None Include="parser\lib\unicore\To\Lc.pl" />
+    <None Include="parser\lib\unicore\To\Lower.pl" />
+    <None Include="parser\lib\unicore\To\Na1.pl" />
+    <None Include="parser\lib\unicore\To\NameAlia.pl" />
+    <None Include="parser\lib\unicore\To\NFCQC.pl" />
+    <None Include="parser\lib\unicore\To\NFDQC.pl" />
+    <None Include="parser\lib\unicore\To\NFKCCF.pl" />
+    <None Include="parser\lib\unicore\To\NFKCQC.pl" />
+    <None Include="parser\lib\unicore\To\NFKDQC.pl" />
+    <None Include="parser\lib\unicore\To\Nt.pl" />
+    <None Include="parser\lib\unicore\To\Nv.pl" />
+    <None Include="parser\lib\unicore\To\PerlDeci.pl" />
+    <None Include="parser\lib\unicore\To\SB.pl" />
+    <None Include="parser\lib\unicore\To\Sc.pl" />
+    <None Include="parser\lib\unicore\To\Scx.pl" />
+    <None Include="parser\lib\unicore\To\Tc.pl" />
+    <None Include="parser\lib\unicore\To\Title.pl" />
+    <None Include="parser\lib\unicore\To\Uc.pl" />
+    <None Include="parser\lib\unicore\To\Upper.pl" />
+    <None Include="parser\lib\unicore\To\WB.pl" />
+    <None Include="parser\lib\unicore\UCD.pl" />
+    <None Include="parser\lib\unicore\version" />
+    <None Include="parser\lib\utf8.pm" />
+    <None Include="parser\lib\utf8_heavy.pl" />
+    <None Include="parser\lib\vars.pm" />
+    <None Include="parser\lib\warnings.pm" />
+    <None Include="parser\lib\warnings\register.pm" />
+    <None Include="parser\lib\XSLoader.pm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

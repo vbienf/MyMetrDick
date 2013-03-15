@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Jmeter">
+</Property><Property Name="Файл решения" Value="C:\Users\Ens\Desktop\Jmeter\Jmeter.sln">
+</Property><Property Name="Файл параметров пользователя" Value="C:\Users\Ens\Desktop\Jmeter\Jmeter.suo">
+</Property><Property Name="Date" Value="31 августа 2012 г.">
+</Property><Property Name="Time" Value="19:04">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Jmeter.sln" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Jmeter.suo" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter.suo">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Jmeter.csproj" Description="Успешно создана резервная копия файла проекта: C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Jmeter.csproj">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Form1.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Form1.Designer.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Program.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Program.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Properties\AssemblyInfo.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Properties\Resources.Designer.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Properties\Settings.Designer.cs" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Properties\Settings.settings" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Form1.resx" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Properties\Resources.resx" Description="Успешно создана резервная копия файла C:\Users\Ens\Desktop\Jmeter\Backup\Jmeter\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Jmeter.csproj" Description="Проект успешно преобразован">
+</Event><Event ErrorLevel="3" Project="Jmeter" Source="Jmeter\Jmeter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Jmeter.sln" Description="Преобразование решения успешно завершено">
+</Event><Event ErrorLevel="3" Project="" Source="Jmeter.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Jmeter" Source="Jmeter\Jmeter.csproj" Description="Сканирование завершено: обновление для файлов проекта не требуется.">
+</Event></UpgradeLog>

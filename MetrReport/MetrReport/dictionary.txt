@@ -1,0 +1,5 @@
+*pflb-mem*;Mem
+*sar-cpu_all*;CPU_All
+*sar-cpu2*;CPU
+*sar-disk*;Disk
+*day-a*;Jmeter

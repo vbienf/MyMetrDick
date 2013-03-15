@@ -1,0 +1,12 @@
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\bin\Debug\MetrReport.exe
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\bin\Debug\MetrReport.pdb
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\bin\Debug\EPPlus.dll
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\bin\Debug\EPPlus.xml
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\MetrReport.csprojResolveAssemblyReference.cache
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\MetrReport.csproj.ResolveComReference.cache
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\PfLb.ReportMaker.CustomControl1.resources
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\PfLb.ReportMaker.ProgressForm.resources
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\PerformanceLab.Utils.ReportMaker.MainForm.resources
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\MetrReport.csproj.GenerateResource.Cache
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\MetrReport.exe
+C:\Softinka\MyMetrDick\MetrReport\MetrReport\obj\Debug\MetrReport.pdb
