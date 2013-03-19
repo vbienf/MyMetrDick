@@ -92,8 +92,18 @@ namespace PerformanceLab.Utils.ReportMaker
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            var from = fromTime.Text;
-            var to = toTime.Text;
+            if (checkBoxTime.Checked)
+            {
+                //string secondline = File.ReadAllLines(@"");
+                var from = fromTime.Text;
+                var to = toTime.Text;
+            }
+            else
+            {
+                var from = fromTime.Text;
+                var to = toTime.Text;
+            }
+
             int rumpMin = (int)numericRump.Value;
             int OneHundPerc = metricsGridView.RowCount * 2 + 7;
             int OnePerc = (OneHundPerc) / 100;
