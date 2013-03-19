@@ -48,7 +48,7 @@ namespace PerformanceLab.Utils.ReportMaker
             {
                 if (tabControl.SelectedIndex == 0)
                 {
-                    if (numericEffort.Value == 0 || numericRump.Value < 0 || numericUpDown1.Value < 0) throw new Exception("Не заданы параметры запуска: время разгона и(или) количество заявок");
+                    if ((numericEffort.Value == 0 || numericRump.Value < 0 || numericUpDown1.Value < 0) && checkBoxTime.Checked == false) throw new Exception("Не заданы параметры запуска: время разгона и(или) количество заявок");
                     if (metricsGridView.RowCount == 0) throw new Exception("Не заданы параметры запуска: файлы с метриками отсутствуют!");
                     if (!metricsGridView[0, 1].Value.ToString().Contains("Metrics")) throw new Exception("Не заданы параметры запуска: файлы с метриками должны находиться в папке Metrics, в папке соответствующего сервера!");
                     if (!backgroundWorker.IsBusy)
